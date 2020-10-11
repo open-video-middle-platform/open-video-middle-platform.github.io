@@ -3,13 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-视频管理系统
+自媒体视频中台
 ======================================================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
+   intro.rst
    howto
    pycharm/configuration
    users
