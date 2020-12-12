@@ -12,3 +12,9 @@
 正在开发中. . . 
 
 `Issues <https://github.com/open-video-middle-platform/open-video-middle-platform.github.io/issues>`_ 
+
+欢迎加入QQ群:
+
+.. image:: _static/WechatIMG33.jpeg
+
+   :width: 200px
