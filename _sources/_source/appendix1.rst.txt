@@ -1,0 +1,79 @@
+.. index:: 名字解释
+
+#############################
+名字解释
+#############################
+
+
+
+.. glossary:: 系统名词
+
+   Studio
+      生产的厂商,里面可以有多个, 可以是生产的人的组合.
+
+   Subtitle
+      字幕
+
+   Scene
+      场景一个视频包含多个场景组成
+
+   Block
+      一个剪切素材,可以是文字,图片,视频等, 类似于章节, 各种形式的素材块, 最终合成为video, 为全局共享. 用于用户编辑
+
+   Clip
+      片段, 用于一些高频的使用素材.
+
+   Playbook
+      剧本,用于
+
+   Movie
+      一个电影是整个系统的产出
+
+   Post
+      帖子,文字产物
+
+   video
+      视频素材,可以从文字,图片转换来,为Scene的合成素材,和转换中间产物
+
+   Series
+      一个系列,比如宠物系列, 
+
+
+
+   BlockSource
+      描述一个能够持续生产Clip的数据源,可以是Rss或者其他数据源,可以定时爬取
+
+   VideoSource
+      描述一个能够持续生产一个Vide的数据源,可以是Rss或者其他数据源,可以被爬虫定时爬取
+
+   Publisher
+      发行方,最终发布到那个视频, 比如Youtube, iqiyi,
+
+
+   MoiveFilter
+      滤镜,用于整个moive相关
+
+
+   Cutter
+      剪辑师, 剪辑的人
+
+   CutTask
+      剪辑任务,描述一个剪辑任务
+
+   PublishTask
+      发布任务
+
+   SpiderTask
+      赚取任务
+
+   TaskRunner
+      任务运行器
+
+   Rss
+      订阅的源头,RSS描述, 如果没有RSS,转为RSS
+   
+   MovieLeader
+      电影的片头和片尾,需要精致处理
+
+   MovieTrailer
+      电影的片尾
