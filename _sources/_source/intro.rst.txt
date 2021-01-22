@@ -20,6 +20,10 @@
 2. 视频的剪辑编辑
 3. 视频的推送管理
 
+
+.. image:: _source/_static/images/2021-01-22-21-31-56.png
+
+
 正在开发中. . . 
 
 `Issues <https://github.com/open-video-middle-platform/open-video-middle-platform.github.io/issues>`_ 
