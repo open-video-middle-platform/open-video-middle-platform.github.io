@@ -1,3 +1,15 @@
 #############################
 前端
 #############################
+
+工程初始化:
+
+.. code-block:: bash
+
+   yarn create @umijs/umi-app
+   yarn install
+   yarn add rxdb
+   yarn add rxjs
+   yarn add umi-request
+   yarn start
+
