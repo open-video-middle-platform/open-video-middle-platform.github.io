@@ -20,12 +20,9 @@
 2. 视频的剪辑编辑
 3. 视频的推送管理
 
-整体业务架构如下:
-
-.. image:: _source/_static/images/2021-01-22-21-31-56.png
 
 
-欢迎提交Issus
+欢迎提交issus:
 
 `Issues <https://github.com/open-video-middle-platform/open-video-middle-platform.github.io/issues>`_ 
 
