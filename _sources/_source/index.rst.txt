@@ -14,7 +14,6 @@ MCN视频中台
    model.rst
    service/index.rst
    howto
-   pycharm/configuration
    users
    appendix1.rst
 
