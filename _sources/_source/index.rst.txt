@@ -12,6 +12,7 @@ MCN视频中台
 
    intro.rst
    model.rst
+   service/index.rst
    howto
    pycharm/configuration
    users
