@@ -14,6 +14,7 @@ MCN视频中台
    install.rst
    project/index.rst
    service/index.rst
+   usecase/index.rst
    howto
    collaborator.rst
    releasenote.rst
