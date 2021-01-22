@@ -11,10 +11,10 @@ MCN视频中台
    :caption: Contents:
 
    intro.rst
-   model.rst
    service/index.rst
    howto
-   users
+   collaborator.rst
+   releasenote.rst
    appendix1.rst
 
 
