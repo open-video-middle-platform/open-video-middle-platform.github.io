@@ -11,6 +11,7 @@ MCN视频中台
    :caption: Contents:
 
    intro.rst
+   install.rst
    service/index.rst
    howto
    collaborator.rst
