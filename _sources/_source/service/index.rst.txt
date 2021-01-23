@@ -7,3 +7,4 @@
 
    intro.rst
    storage_service.rst
+   task_service.rst

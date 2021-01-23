@@ -1,0 +1,111 @@
+#############################
+任务服务
+#############################
+
+*****************************
+任务管理
+*****************************
+
+启动worker
+=============================
+
+.. code-block:: bash
+
+   (venv) ➜  video-management-system git:(master) ✗ make worker
+   celery -A config.celery_app worker -l INFO
+   
+   -------------- celery@timger-mac-mini-main.local v4.4.6 (cliffs)
+   --- ***** ----- 
+   -- ******* ---- macOS-10.14.6-x86_64-i386-64bit 2021-01-23 12:38:37
+   - *** --- * --- 
+   - ** ---------- [config]
+   - ** ---------- .> app:         mcn:0x104e9d8e0
+   - ** ---------- .> transport:   sqla+mysql://mcn:**@127.0.0.1/celery
+   - ** ---------- .> results:     
+   - *** --- * --- .> concurrency: 4 (prefork)
+   -- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+   --- ***** ----- 
+   -------------- [queues]
+                  .> celery           exchange=celery(direct) key=celery
+                  
+
+   [tasks]
+   . djcelery_email_send_multiple
+   . mcn.users.tasks.get_users_count
+
+   [2021-01-23 12:38:38,084: INFO/MainProcess] Connected to sqla+mysql://mcn:**@127.0.0.1/celery
+   [2021-01-23 12:38:38,137: WARNING/MainProcess] /data/GitHub/video-management-system/venv/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+               leak, never use this setting in production environments!
+   warnings.warn('''Using settings.DEBUG leads to a memory
+   [2021-01-23 12:38:38,137: INFO/MainProcess] celery@timger-mac-mini-main.local ready.
+
+
+启动beat
+=============================
+
+
+.. code-block:: bash
+
+   (venv) ➜  video-management-system git:(master) ✗ make beat
+   rm -f './celerybeat.pid'
+   celery -A config.celery_app beat -l INFO --scheduler django_celery_beat.schedulers:DatabaseScheduler
+   celery beat v4.4.6 (cliffs) is starting.
+   __    -    ... __   -        _
+   LocalTime -> 2021-01-23 12:39:14
+   Configuration ->
+      . broker -> sqla+mysql://mcn:**@127.0.0.1/celery
+      . loader -> celery.loaders.app.AppLoader
+      . scheduler -> django_celery_beat.schedulers.DatabaseScheduler
+
+      . logfile -> [stderr]@%INFO
+      . maxinterval -> 5.00 seconds (5s)
+   [2021-01-23 12:39:14,172: INFO/MainProcess] beat: Starting...
+   [2021-01-23 12:39:14,173: INFO/MainProcess] Writing entries...
+
+
+启动flower管理界面
+=============================
+
+.. code-block:: bash
+
+   (venv) ➜  video-management-system git:(master) ✗ make flower
+   celery flower \
+                  --app=config.celery_app \
+                  --broker="sqla+mysql://mcn:***f@127.0.0.1/celery" \
+                  --basic_auth="root:11259375"
+   INFO 2021-01-23 12:39:49,682 command 53540 4762609088 Visit me at http://localhost:5555
+   INFO 2021-01-23 12:39:49,908 command 53540 4762609088 Broker: sqla+mysql://mcn:**@127.0.0.1/celery
+   INFO 2021-01-23 12:39:49,916 command 53540 4762609088 Registered tasks: 
+   ['celery.accumulate',
+   'celery.backend_cleanup',
+   'celery.chain',
+   'celery.chord',
+   'celery.chord_unlock',
+   'celery.chunks',
+   'celery.group',
+   'celery.map',
+   'celery.starmap',
+   'djcelery_email_send_multiple',
+   'mcn.users.tasks.get_users_count']
+   INFO 2021-01-23 12:39:50,015 mixins 53540 123145319137280 Connected to sqla+mysql://mcn:**@127.0.0.1/celery
+   WARNING 2021-01-23 12:39:52,925 control 53540 4762609088 'stats' inspect method failed
+   WARNING 2021-01-23 12:39:52,925 control 53540 4762609088 'active_queues' inspect method failed
+   WARNING 2021-01-23 12:39:52,926 control 53540 4762609088 'registered' inspect method failed
+   WARNING 2021-01-23 12:39:52,926 control 53540 4762609088 'scheduled' inspect method failed
+   WARNING 2021-01-23 12:39:52,926 control 53540 4762609088 'active' inspect method failed
+   WARNING 2021-01-23 12:39:52,926 control 53540 4762609088 'reserved' inspect method failed
+   WARNING 2021-01-23 12:39:52,926 control 53540 4762609088 'revoked' inspect method failed
+   WARNING 2021-01-23 12:39:52,927 control 53540 4762609088 'conf' inspect method failed
+
+
+
+
+*****************************
+界面管理
+*****************************
+
+
+flower
+=============================
+
+.. image:: _static/images/2021-01-23-20-36-17.png

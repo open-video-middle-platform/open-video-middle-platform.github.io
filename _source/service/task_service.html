@@ -1,0 +1,335 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>任务服务 &mdash; MCN视频中台  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="脚手架" href="../tools.html" />
+    <link rel="prev" title="存储服务" href="storage_service.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> MCN视频中台
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project/index.html">项目工程</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">模块服务</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html">模块服务简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="storage_service.html">存储服务</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">任务服务</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">任务管理</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#worker">启动worker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#beat">启动beat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flower">启动flower管理界面</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">界面管理</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">flower</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tools.html">脚手架</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usecase/index.html">用例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../howto.html">如何使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../collaborator.html">协作者</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../releasenote.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix1.html">名字解释</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MCN视频中台</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">模块服务</a> &raquo;</li>
+        
+      <li>任务服务</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/_source/service/task_service.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>任务服务<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>任务管理<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="worker">
+<h3>启动worker<a class="headerlink" href="#worker" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>(venv) ➜  video-management-system git:(master) ✗ make worker
+celery -A config.celery_app worker -l INFO
+
+-------------- celery@timger-mac-mini-main.local v4.4.6 (cliffs)
+--- ***** -----
+-- ******* ---- macOS-10.14.6-x86_64-i386-64bit 2021-01-23 12:38:37
+- *** --- * ---
+- ** ---------- [config]
+- ** ---------- .&gt; app:         mcn:0x104e9d8e0
+- ** ---------- .&gt; transport:   sqla+mysql://mcn:**@127.0.0.1/celery
+- ** ---------- .&gt; results:
+- *** --- * --- .&gt; concurrency: 4 (prefork)
+-- ******* ---- .&gt; task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** -----
+-------------- [queues]
+               .&gt; celery           exchange=celery(direct) key=celery
+
+
+[tasks]
+. djcelery_email_send_multiple
+. mcn.users.tasks.get_users_count
+
+[2021-01-23 12:38:38,084: INFO/MainProcess] Connected to sqla+mysql://mcn:**@127.0.0.1/celery
+[2021-01-23 12:38:38,137: WARNING/MainProcess] /data/GitHub/video-management-system/venv/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+warnings.warn(&#39;&#39;&#39;Using settings.DEBUG leads to a memory
+[2021-01-23 12:38:38,137: INFO/MainProcess] celery@timger-mac-mini-main.local ready.
+</pre></div>
+</div>
+</div>
+<div class="section" id="beat">
+<h3>启动beat<a class="headerlink" href="#beat" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>venv<span class="o">)</span> ➜  video-management-system git:<span class="o">(</span>master<span class="o">)</span> ✗ make beat
+rm -f <span class="s1">&#39;./celerybeat.pid&#39;</span>
+celery -A config.celery_app beat -l INFO --scheduler django_celery_beat.schedulers:DatabaseScheduler
+celery beat v4.4.6 <span class="o">(</span>cliffs<span class="o">)</span> is starting.
+__    -    ... __   -        _
+LocalTime -&gt; <span class="m">2021</span>-01-23 <span class="m">12</span>:39:14
+Configuration -&gt;
+   . broker -&gt; sqla+mysql://mcn:**@127.0.0.1/celery
+   . loader -&gt; celery.loaders.app.AppLoader
+   . scheduler -&gt; django_celery_beat.schedulers.DatabaseScheduler
+
+   . logfile -&gt; <span class="o">[</span>stderr<span class="o">]</span>@%INFO
+   . maxinterval -&gt; <span class="m">5</span>.00 seconds <span class="o">(</span>5s<span class="o">)</span>
+<span class="o">[</span><span class="m">2021</span>-01-23 <span class="m">12</span>:39:14,172: INFO/MainProcess<span class="o">]</span> beat: Starting...
+<span class="o">[</span><span class="m">2021</span>-01-23 <span class="m">12</span>:39:14,173: INFO/MainProcess<span class="o">]</span> Writing entries...
+</pre></div>
+</div>
+</div>
+<div class="section" id="flower">
+<h3>启动flower管理界面<a class="headerlink" href="#flower" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>venv<span class="o">)</span> ➜  video-management-system git:<span class="o">(</span>master<span class="o">)</span> ✗ make flower
+celery flower <span class="se">\</span>
+               --app<span class="o">=</span>config.celery_app <span class="se">\</span>
+               --broker<span class="o">=</span><span class="s2">&quot;sqla+mysql://mcn:***f@127.0.0.1/celery&quot;</span> <span class="se">\</span>
+               --basic_auth<span class="o">=</span><span class="s2">&quot;root:11259375&quot;</span>
+INFO <span class="m">2021</span>-01-23 <span class="m">12</span>:39:49,682 <span class="nb">command</span> <span class="m">53540</span> <span class="m">4762609088</span> Visit me at http://localhost:5555
+INFO <span class="m">2021</span>-01-23 <span class="m">12</span>:39:49,908 <span class="nb">command</span> <span class="m">53540</span> <span class="m">4762609088</span> Broker: sqla+mysql://mcn:**@127.0.0.1/celery
+INFO <span class="m">2021</span>-01-23 <span class="m">12</span>:39:49,916 <span class="nb">command</span> <span class="m">53540</span> <span class="m">4762609088</span> Registered tasks:
+<span class="o">[</span><span class="s1">&#39;celery.accumulate&#39;</span>,
+<span class="s1">&#39;celery.backend_cleanup&#39;</span>,
+<span class="s1">&#39;celery.chain&#39;</span>,
+<span class="s1">&#39;celery.chord&#39;</span>,
+<span class="s1">&#39;celery.chord_unlock&#39;</span>,
+<span class="s1">&#39;celery.chunks&#39;</span>,
+<span class="s1">&#39;celery.group&#39;</span>,
+<span class="s1">&#39;celery.map&#39;</span>,
+<span class="s1">&#39;celery.starmap&#39;</span>,
+<span class="s1">&#39;djcelery_email_send_multiple&#39;</span>,
+<span class="s1">&#39;mcn.users.tasks.get_users_count&#39;</span><span class="o">]</span>
+INFO <span class="m">2021</span>-01-23 <span class="m">12</span>:39:50,015 mixins <span class="m">53540</span> <span class="m">123145319137280</span> Connected to sqla+mysql://mcn:**@127.0.0.1/celery
+WARNING <span class="m">2021</span>-01-23 <span class="m">12</span>:39:52,925 control <span class="m">53540</span> <span class="m">4762609088</span> <span class="s1">&#39;stats&#39;</span> inspect method failed
+WARNING <span class="m">2021</span>-01-23 <span class="m">12</span>:39:52,925 control <span class="m">53540</span> <span class="m">4762609088</span> <span class="s1">&#39;active_queues&#39;</span> inspect method failed
+WARNING <span class="m">2021</span>-01-23 <span class="m">12</span>:39:52,926 control <span class="m">53540</span> <span class="m">4762609088</span> <span class="s1">&#39;registered&#39;</span> inspect method failed
+WARNING <span class="m">2021</span>-01-23 <span class="m">12</span>:39:52,926 control <span class="m">53540</span> <span class="m">4762609088</span> <span class="s1">&#39;scheduled&#39;</span> inspect method failed
+WARNING <span class="m">2021</span>-01-23 <span class="m">12</span>:39:52,926 control <span class="m">53540</span> <span class="m">4762609088</span> <span class="s1">&#39;active&#39;</span> inspect method failed
+WARNING <span class="m">2021</span>-01-23 <span class="m">12</span>:39:52,926 control <span class="m">53540</span> <span class="m">4762609088</span> <span class="s1">&#39;reserved&#39;</span> inspect method failed
+WARNING <span class="m">2021</span>-01-23 <span class="m">12</span>:39:52,926 control <span class="m">53540</span> <span class="m">4762609088</span> <span class="s1">&#39;revoked&#39;</span> inspect method failed
+WARNING <span class="m">2021</span>-01-23 <span class="m">12</span>:39:52,927 control <span class="m">53540</span> <span class="m">4762609088</span> <span class="s1">&#39;conf&#39;</span> inspect method failed
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>界面管理<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h3>flower<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<img alt="../../_images/2021-01-23-20-36-17.png" src="../../_images/2021-01-23-20-36-17.png" />
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tools.html" class="btn btn-neutral float-right" title="脚手架" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="storage_service.html" class="btn btn-neutral float-left" title="存储服务" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, yishenggudou
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
