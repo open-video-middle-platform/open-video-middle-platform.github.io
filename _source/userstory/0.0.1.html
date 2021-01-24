@@ -177,17 +177,27 @@
 <p>比如存在视频 <a class="reference external" href="https://www.youtube.com/watch?v=s0uS68AKxNY">https://www.youtube.com/watch?v=s0uS68AKxNY</a></p>
 <p>我们需要能将这个视频 抓取下来 并且存入数据和文件</p>
 <ol class="arabic simple">
-<li><p>抓取可以基于 <a class="reference external" href="https://github.com/ytdl-org/youtube-dl">https://github.com/ytdl-org/youtube-dl</a>
-1. 可以批量抓取
-2. 可以根据不同的平台,比如youtube,iqiyi,腾讯</p></li>
-<li><p>考虑到要并行抓取, 或者后台抓取 需要任务管理能力 这一部分基于 celery
-1. 能够后台运行. 无人值守
-2. 多并发, 同时爬100个
-3. 视频简介的抓取</p></li>
-<li><p>我们自己需要能够创建任务, 创建需求, 这个时候就需要一个命令行版本 这个时候可以基于 django 自己 management 这部分扩展
-1. 根据用户生成任务
-2. 根据地址生成任务
-3. 根据不同平台生成</p></li>
+<li><p>抓取可以基于 <a class="reference external" href="https://github.com/ytdl-org/youtube-dl">https://github.com/ytdl-org/youtube-dl</a></p>
+<ol class="arabic simple">
+<li><p>可以批量抓取</p></li>
+<li><p>可以根据不同的平台,比如youtube,iqiyi,腾讯</p></li>
+</ol>
+</li>
+<li><p>考虑到要并行抓取, 或者后台抓取 需要任务管理能力 这一部分基于 celery</p>
+<ol class="arabic simple">
+<li><p>能够后台运行. 无人值守</p></li>
+<li><p>多并发, 同时爬100个</p></li>
+<li><p>视频简介的抓取</p></li>
+</ol>
+</li>
+<li><p>我们自己需要能够创建任务, 创建需求, 这个时候就需要一个命令行版本 这个时候可以基于 django 自己 management 这部分扩展</p>
+<ol class="arabic simple">
+<li><p>根据用户生成任务</p></li>
+<li><p>根据地址生成任务</p></li>
+<li><p>根据不同平台生成</p></li>
+</ol>
+</li>
+<li><p>文字的抓取</p></li>
 </ol>
 </div>
 <div class="section" id="id3">
