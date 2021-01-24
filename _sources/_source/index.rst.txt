@@ -12,6 +12,7 @@ MCN视频中台
 
    intro.rst
    install.rst
+   userstory/index.rst
    project/index.rst
    service/index.rst
    tools.rst
