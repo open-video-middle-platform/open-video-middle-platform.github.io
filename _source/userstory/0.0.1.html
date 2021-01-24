@@ -86,7 +86,12 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../intro.html">简介</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">user story</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">0.0.1版本功能需求</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">0.0.1版本功能需求</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">抓取</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">剪辑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">发布</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../project/index.html">项目工程</a></li>
@@ -166,6 +171,53 @@
             
   <div class="section" id="id1">
 <h1>0.0.1版本功能需求<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>0.0.1 版本实现 抓取-&gt;简单剪辑-&gt;自动发布能力</p>
+<div class="section" id="id2">
+<h2>抓取<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>比如存在视频 <a class="reference external" href="https://www.youtube.com/watch?v=s0uS68AKxNY">https://www.youtube.com/watch?v=s0uS68AKxNY</a></p>
+<p>我们需要能将这个视频 抓取下来 并且存入数据和文件</p>
+<ol class="arabic simple">
+<li><p>抓取可以基于 <a class="reference external" href="https://github.com/ytdl-org/youtube-dl">https://github.com/ytdl-org/youtube-dl</a>
+1. 可以批量抓取
+2. 可以根据不同的平台,比如youtube,iqiyi,腾讯</p></li>
+<li><p>考虑到要并行抓取, 或者后台抓取 需要任务管理能力 这一部分基于 celery
+1. 能够后台运行. 无人值守
+2. 多并发, 同时爬100个
+3. 视频简介的抓取</p></li>
+<li><p>我们自己需要能够创建任务, 创建需求, 这个时候就需要一个命令行版本 这个时候可以基于 django 自己 management 这部分扩展
+1. 根据用户生成任务
+2. 根据地址生成任务
+3. 根据不同平台生成</p></li>
+</ol>
+</div>
+<div class="section" id="id3">
+<h2>剪辑<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>去水印</p></li>
+<li><p>加上水印</p></li>
+<li><p>加上背景音乐</p></li>
+<li><p>加上片头片尾</p></li>
+</ol>
+</div>
+<div class="section" id="id4">
+<h2>发布<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>可以根据配置的账号发布到不同的平台
+1. youtube
+2. 头条</p></li>
+<li><p>可以后台发布</p></li>
+<li><p>可以定时发布</p></li>
+</ol>
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="celeryproject"><span class="brackets">1</span></dt>
+<dd><p><a class="reference external" href="https://docs.celeryproject.org/en/stable/getting-started/introduction.html">https://docs.celeryproject.org/en/stable/getting-started/introduction.html</a></p>
+</dd>
+<dt class="label" id="f2"><span class="brackets">2</span></dt>
+<dd><p>Text of the second footnote.</p>
+</dd>
+</dl>
+</div>
 </div>
 
 
