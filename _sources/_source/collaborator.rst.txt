@@ -1,4 +1,14 @@
 #############################
-协作者
+协作&协议
 #############################
 
+
+
+*****************************
+开源软件
+*****************************
+
+使用的开源技术如下:
+
+1. https://github.com/zapisnicar/cookiecutter-pyside2
+2. https://github.com/pydanny/cookiecutter-django/
