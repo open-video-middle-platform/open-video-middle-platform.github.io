@@ -8,7 +8,12 @@
 开源软件
 *****************************
 
-使用的开源技术如下:
+项目模板使用的开源技术如下:
 
 1. https://github.com/zapisnicar/cookiecutter-pyside2
 2. https://github.com/pydanny/cookiecutter-django/
+
+
+其他开源技术
+
+1. 
