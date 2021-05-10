@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>任务服务 &mdash; MCN视频中台  documentation</title>
@@ -82,7 +83,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Contents:</span></p>
+              <p><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../intro.html">简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../userstory/index.html">用户故事/PRD</a></li>
@@ -180,15 +181,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="id1">
+  <section id="id1">
 <h1>任务服务<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id2">
+<section id="id2">
 <h2>开发任务<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>开发任务基于 <code class="docutils literal notranslate"><span class="pre">celery</span></code> 的 <code class="docutils literal notranslate"><span class="pre">task</span></code> 能力来开发</p>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h2>任务管理<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="worker">
+<section id="worker">
 <h3>启动worker<a class="headerlink" href="#worker" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>(venv) ➜  video-management-system git:(master) ✗ make worker
 celery -A config.celery_app worker -l INFO
@@ -219,8 +220,8 @@ warnings.warn(&#39;&#39;&#39;Using settings.DEBUG leads to a memory
 [2021-01-23 12:38:38,137: INFO/MainProcess] celery@timger-mac-mini-main.local ready.
 </pre></div>
 </div>
-</div>
-<div class="section" id="beat">
+</section>
+<section id="beat">
 <h3>启动beat<a class="headerlink" href="#beat" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>venv<span class="o">)</span> ➜  video-management-system git:<span class="o">(</span>master<span class="o">)</span> ✗ make beat
 rm -f <span class="s1">&#39;./celerybeat.pid&#39;</span>
@@ -239,8 +240,8 @@ Configuration -&gt;
 <span class="o">[</span><span class="m">2021</span>-01-23 <span class="m">12</span>:39:14,173: INFO/MainProcess<span class="o">]</span> Writing entries...
 </pre></div>
 </div>
-</div>
-<div class="section" id="flower">
+</section>
+<section id="flower">
 <h3>启动flower管理界面<a class="headerlink" href="#flower" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>venv<span class="o">)</span> ➜  video-management-system git:<span class="o">(</span>master<span class="o">)</span> ✗ make flower
 celery flower <span class="se">\</span>
@@ -272,16 +273,16 @@ WARNING <span class="m">2021</span>-01-23 <span class="m">12</span>:39:52,926 co
 WARNING <span class="m">2021</span>-01-23 <span class="m">12</span>:39:52,927 control <span class="m">53540</span> <span class="m">4762609088</span> <span class="s1">&#39;conf&#39;</span> inspect method failed
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="id4">
+</section>
+</section>
+<section id="id4">
 <h2>界面管理<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id5">
+<section id="id5">
 <h3>flower<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <img alt="../../_images/2021-01-23-20-36-17.png" src="../../_images/2021-01-23-20-36-17.png" />
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>

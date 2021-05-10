@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Docker Remote Debugging &mdash; MCN视频中台  documentation</title>
@@ -80,7 +81,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Contents:</span></p>
+              <p><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../intro.html">简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../userstory/index.html">用户故事/PRD</a></li>
@@ -157,12 +158,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="docker-remote-debugging">
+  <section id="docker-remote-debugging">
 <h1>Docker Remote Debugging<a class="headerlink" href="#docker-remote-debugging" title="Permalink to this headline">¶</a></h1>
 <p>To connect to python remote interpreter inside docker, you have to make sure first, that Pycharm is aware of your docker.</p>
 <p>Go to <em>Settings &gt; Build, Execution, Deployment &gt; Docker</em>. If you are on linux, you can use docker directly using its socket  <cite>unix:///var/run/docker.sock</cite>, if you are on Windows or Mac, make sure that you have docker-machine installed, then you can simply <em>Import credentials from Docker Machine</em>.</p>
 <img alt="../../_images/1.png" src="../../_images/1.png" />
-<div class="section" id="configure-remote-python-interpreter">
+<section id="configure-remote-python-interpreter">
 <h2>Configure Remote Python Interpreter<a class="headerlink" href="#configure-remote-python-interpreter" title="Permalink to this headline">¶</a></h2>
 <p>This repository comes with already prepared “Run/Debug Configurations” for docker.</p>
 <img alt="../../_images/2.png" src="../../_images/2.png" />
@@ -192,8 +193,8 @@
 <ul class="simple">
 <li><p>and many others..</p></li>
 </ul>
-</div>
-<div class="section" id="known-issues">
+</section>
+<section id="known-issues">
 <h2>Known issues<a class="headerlink" href="#known-issues" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Pycharm hangs on “Connecting to Debugger”</p></li>
@@ -209,8 +210,8 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git update-index --assume-unchanged vms.iml
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
